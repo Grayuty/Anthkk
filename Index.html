@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AnonChat | No Trace</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="view-onboard" class="view" style="display:none;">
+        <div class="onboard-card">
+            <h1>AnonChat</h1>
+            <p>No phone. No email. No recovery.</p>
+            <div class="warning-box">
+                Your ID is your <strong>only</strong> way to access chats. If you lose it, your messages are gone forever.
+            </div>
+            <button id="btn-generate" class="primary-btn">Generate Identity</button>
+        </div>
+    </div>
+
+    <div id="view-home" class="view" style="display:none;">
+        <header>
+            <div class="user-meta">
+                <span>My ID: </span><strong id="display-my-id">...</strong>
+            </div>
+        </header>
+        <div class="main-actions">
+            <input type="text" id="partner-id-input" placeholder="Enter Friend's ID...">
+            <button id="btn-start-chat">Open Chat</button>
+        </div>
+        <div class="section-label">Active Chats</div>
+        <div id="chat-list" class="list-container">
+            </div>
+    </div>
+
+    <div id="view-chat" class="view" style="display:none;">
+        <header class="chat-header">
+            <button id="btn-back">←</button>
+            <div class="chat-title">
+                <span id="display-partner-id">...</span>
+                <small>Messages vanish in 24h</small>
+            </div>
+        </header>
+        <div id="messages-container"></div>
+        <div class="input-area">
+            <label for="img-input" class="img-btn">
+                📷
+                <input type="file" id="img-input" accept="image/*" style="display:none;">
+            </label>
+            <input type="text" id="msg-input" placeholder="Type a message...">
+            <button id="btn-send">Send</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
